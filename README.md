@@ -1,1 +1,1 @@
-# [Devlopr69.github.io](https://Devlopr69.github.io)
+# [www.devlopr.ml](https://www.devlopr.ml)
