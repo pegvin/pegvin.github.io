@@ -1,0 +1,26 @@
+This is the list of all 24 languages
+
+Markup - markup, html, xml, svg, mathml, ssml, atom, rss
+CSS - css
+C-like - clike
+JavaScript - javascript, js
+Bash - bash, shell
+Batch - batch
+C - c
+C# - csharp, cs, dotnet
+C++ - cpp
+Dart - dart
+Docker - docker, dockerfile
+Git - git
+Go - go
+Java - java
+Lua - lua
+Objective-C - objectivec, objc
+Perl - perl
+PHP - php
+PowerShell - powershell
+Python - python, py
+React JSX - jsx
+Ruby - ruby, rb
+SQL - sql
+Swift - swift
