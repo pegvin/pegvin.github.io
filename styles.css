@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+* { padding: 0; margin: 0; box-sizing: border-box;
+	background-color: #121212; user-select: none;
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	background-color: #36b8f4;
+	font-family: 'Abel', sans-serif;
+	display: flex;
+	animation: BGcolor 60s infinite;
+}
+
+@keyframes BGcolor {
+	0% { background-color: #36b8f4; }
+	50% { background-color: #154a63; }
+	100% { background-color: #36b8f4; }
+}
+
+.container {
+	width: 22em; height: 30em;
+	box-shadow: 0px 5px 43px #0000002e;
+	margin: auto; border-radius: .4em;
+	justify-content: center; align-items: center; text-align: center;
+	overflow: hidden;
+}
+
+.profile {
+	display: block; margin-left: auto; margin-right: auto;
+	margin-top: 2em; max-width: 10em;
+	border-radius: 50%; border: .5em solid #313131;
+	background-color: #313131;
+}
+
+.name { color: #fff; font-size: 2.1em; font-weight: normal; margin-top: 1.2em;}
+.title { color: #36b8f4; font-size: 1.5em; margin-top: 0.2em; margin-bottom: 0.4em; }
+p { font-size: 1.3em; color: #ffffff; margin-top: 1em; }
+.icons { margin-top: 2.5em; }
+
+.icons i {
+	margin-left: 5px;
+	font-size: 20px;
+	transition: 0.3s;
+	border-radius: 10%;
+
+	padding: 0.7em; -o-transition:.5s; -ms-transition:.5s;
+	-moz-transition:.5s; -webkit-transition:.5s; transition: .5s;
+	background-color: #322f30; color: #36b8f4;
+}
+.icons i:hover { color: #fff; }
+.fa-youtube { padding-left: .65em !important; padding-right: .65em !important; }
+.fa-youtube:hover {	background-color: #FF3838; }
+.fa-github:hover { background-color: #5a32a3; }
+.fa-telegram:hover { background: #0088cc; }
+.fa-instagram:hover { background: #FF5BF9; }
