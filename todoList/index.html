@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Todo List</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+	<link rel="stylesheet" href="lib/swal2/sweetalert2.min.css">
+	<link rel="stylesheet" href="lib/swal2/dark-theme.css">
+</head>
+<body>
+
+<div class="container">
+	<p class="tasker-header" id="tasker-header">
+		<label for="input-task" style="color: #64d143;">Add Item</label><input id="input-task" type="text"><button id="add-task-btn">Add</button>
+	</p>
+
+	<h3 style="color: #64d143;">Todo</h3>
+
+	<div class="tasker-body">
+		<ul id="tasks"></ul>
+	</div>
+</div>
+
+<div id="controls">
+	<i data-tippy-content="Clear The Selected Tasks" id="clear-done-btn" class="far fa-check-circle"></i>
+	<i data-tippy-content="Delete All The Tasks" id="delete-all-btn" class="far fa-trash-alt"></i>
+</div>
+
+<script src="lib/jquery-3.6.0.min.js"></script>
+<script src="lib/swal2/sweetalert2.min.js"></script>
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
