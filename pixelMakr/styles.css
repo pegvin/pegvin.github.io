@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap');
+* { box-sizing: border-box; font-family: Quicksand, sans-serif; }
+
+html, body {
+	margin: 0; padding: 0;
+	height: 100%; width: 100%; user-select: none;
+	text-align: center; background: #131313;
+	position: absolute; transform: translate(-50%, -50%); left: 50%; top: 50%;
+}
+
+h1, h2, h3, h4, h5, h6, p, label { color: #a6ff00; font-size: 1.5em; }
+button { margin: 10px auto; cursor: pointer; border-radius: 10px; border: none; outline: none; font-size: 1.3em; }
+table, tr, td { border: 1px solid black; }
+table { border-collapse: collapse; margin: 20px auto; box-shadow: 0px 0px 5px #ffffff; }
+tr { height: 1.5em; cursor: pointer; }
+td { width: 1.5em; background-color: #ffffff; }
+
+#canvasHolder { padding: 20px 10px; }
+[type=number] { width: 7em; outline: none; font-size: 1.5em; border: none; background: #333; color: #a6ff00; padding: 5px; border-radius: 10px; margin-top: 5px; }
+[type=radio], [type=color] { position: absolute; opacity: 0; width: 0; height: 0; }
+[type=radio] + img { cursor: pointer; height: 3em; width: 3em; border: 2px solid #ffffff; }
+[type=radio]:checked + img { border: 2px solid #a6ff00; background-color: #333; }
+[type=color] + img, [type=radio] + img { padding: 5px; border-radius: 10px; }
+
+[type=color] + img { cursor: pointer; height: 3em; width: 3em; border: 2px solid #8f8f8f; }
+
+@media only screen and (max-width: 480px) {
+	tr { height: 5vw; }
+	td { width: 5vw; }
+	table { margin: 5vw auto; }
+	h1, h2, h3, h4, h5, h6, p, label { font-size: 7vw; }
+	button { margin: 4vw auto; font-size: 5vw; }
+	[type=number] { font-size: 5vw; }
+	[type=radio] + img,	[type=color] + img { height: 15vw; width: 15vw; }
+}
+@media only screen and (max-width: 360px) {
+	tr { height: 5vw; }
+	td { width: 5vw; }
+	table { margin: 5vw auto; }
+	h1, h2, h3, h4, h5, h6, p, label { font-size: 7vw; }
+	button { margin: 5vw auto; font-size: 5vw; }
+	[type=number] { font-size: 5vw; }
+	[type=radio] + img,	[type=color] + img { height: 15vw; width: 15vw; }
+}
