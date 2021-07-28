@@ -1,4 +1,5 @@
 # [Website](https://www.devlopr.ml)
+### [⮩ Random User](https://www.devlopr.ml/randomUser)
 ### [⮩ Rock Paper Scissors](https://www.devlopr.ml/rockPaperScissor)
 ### [⮩ Todo List](https://www.devlopr.ml/todoList)
 ### [⮩ Pixel Makr](https://www.devlopr.ml/pixelMakr)
