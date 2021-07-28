@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,600;0,700;1,300;1,400;1,700&display=swap');
+
+* { box-sizing: border-box; white-space: nowrap; transition: all 0.2s ease; -webkit-transition: all 0.2s ease; }
+body {
+	position: absolute; font-family: 'raleway', sans-serif;
+	transform: translate(-50%, -50%); background: #252525;
+	left: 50%; top: 50%; user-select: none;
+}
+
+.body i { font-size: 4em; margin: 5px; }
+.score {
+	font-size: 1.5em;
+	text-align: left;
+	margin-top: 2em;
+	background: #353535;
+	border-radius: 10px;
+	padding: 20px 70px;
+}
+
+p { margin: 20px 0; padding: 0; color: #ffd900; font-size: .9em; }
+a { color: #ccc; text-decoration: none; margin: auto 5px; }
+a:hover { transform: scale(1.2); color: #fff; }
+
+#hands { text-align: center; }
+#hands i { margin: 10px; font-size: 3em; color: #ffd900; cursor: pointer; }
+#hands i:hover { transform: scale(1.3); }
+
+.humanScore { color: #48ff00; }
+.robotScore { color: #00ccff; }
+.game { animation: fadeAnim 2s 1; text-align: center; }
+.menu { text-align: center; color: #fff }
+.menu h1 { color: #00ccff; }
+.menu h1:nth-child(2) { color: #ffd900; }
+.menu button {
+	padding: 10px; outline: none; border: none; font-size: 1.5em; margin-top: 20px;
+	background: #353535; color: #ccc; border-radius: 10px; cursor: pointer;
+}
+.menu button:hover { background: #555555; color: #fff; }
+.game button { padding: 5px; outline: none; border: none; border-radius: 5px; background: #555555; color: #fff; cursor: pointer; }
+.game button:hover { background: #353535; color: #ccc; }
+
+.lds-ellipsis { display: inline-block; position: absolute; left: 35%; width: 80px; height: 40px; }
+.lds-ellipsis div { position: absolute; top: 33px; width: 13px; height: 13px; border-radius: 50%; background: #00ccff; animation-timing-function: cubic-bezier(0, 1, 1, 0); }
+.lds-ellipsis div:nth-child(1) { left: 8px; animation: lds-ellipsis1 0.6s infinite; }
+.lds-ellipsis div:nth-child(2) { left: 8px; animation: lds-ellipsis2 0.6s infinite; }
+.lds-ellipsis div:nth-child(3) { left: 32px; animation: lds-ellipsis2 0.6s infinite; }
+.lds-ellipsis div:nth-child(4) { left: 56px; animation: lds-ellipsis3 0.6s infinite; }
+
+@keyframes fadeAnim { 0% { opacity: 0; } 100% { opacity: 1; } }
+@keyframes lds-ellipsis1{0%{transform:scale(0)}100%{transform:scale(1)}}@keyframes lds-ellipsis3{0%{transform:scale(1)}100%{transform:scale(0)}}@keyframes lds-ellipsis2{0%{transform:translate(0, 0)}100%{transform:translate(24px, 0)}}

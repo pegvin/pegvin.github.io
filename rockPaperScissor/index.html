@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Rock, Paper & Scissors</title>
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+
+<div id="menu" class="menu">
+	<h1>Rock Paper Scissors</h1>
+	<h1>Made with ❤️ &
+		<i style="color: #ff3c00;" class="fab fa-html5"></i>
+		<i style="color: #3cb1ff;" class="fab fa-css3-alt"></i>
+		<i class="fab fa-js-square"></i>
+	</h1>
+	<button id="startButton">Start Playing</button><br>
+	<h1>
+		<a href="https://github.com/Devlopr69" class="fab fa-github-square"></a>
+		<a href="https://youtube.com/channel/UCVmQpp6Ah3s6JnbBvA5Nh7A" class="fab fa-youtube-square"></a>
+		<a href="https://codepen.io/Devlopr" class="fab fa-codepen"></a>
+	</h1>
+</div>
+
+<div id="game" class="game" style="display: none;">
+	<div id="hands">
+		<i id="rock" class="fas fa-hand-rock"></i>
+		<i id="paper" class="fas fa-hand-paper"></i>
+		<i id="scissor" class="fas fa-hand-peace"></i>
+	</div>
+
+	<div class="score">
+		<span class="humanScore"><i class="fas fa-user-alt"></i> <span id="humanScore">0</span></span>
+		&nbsp;&nbsp;
+		<span class="robotScore"><i class="fas fa-robot"></i> <span id="robotScore">0</span></span>
+	</div>
+	<p style="font-size: 1.5em; text-align: center;" id="message">Choose First</p>
+	<button id="endButton">Save & Exit To Menu</button>
+
+	<div id="loader" class="lds-ellipsis">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="jquery-cookie-2.1.min.js"></script>
+<script src="rando2.0.0.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
