@@ -18,7 +18,7 @@ a:hover { transform: scale(1.2); color: #fff; }
 .game button { padding: 5px; margin-top: 50px; outline: none; border: none; border-radius: 5px; background: #555555; color: #fff; cursor: pointer; }
 .game button:hover { background: #353535; color: #ccc; }
 
-#toast { height: 120px; width: 100%; position: sticky; bottom: 0; left: 0; text-align: center; }
+#toast { height: 120px; width: 100%; position: sticky; bottom: 0; left: 0; text-align: center; cursor: pointer; }
 #hands { text-align: center; }
 #hands i { margin: 10px; font-size: 3em; color: #ffd900; cursor: pointer; }
 #hands i:hover { transform: scale(1.3); }
