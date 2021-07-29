@@ -122,7 +122,7 @@ document.getElementById("load-all-btn").addEventListener("click", loadTasks);
 document.getElementById("save-all-btn").addEventListener("click", saveTasks);
 
 function loadTasks() {
-	if (jQuery.isEmptyObject(Cookies.get()) === true) {
+	if (jQuery.isEmptyObject(Cookies.get("classArray"))) {
 		showMsg("Error", "No Saved Tasks Found, clearing cookies will remove all the saved tasks!", "info", "Close")
 		return ;
 	}
