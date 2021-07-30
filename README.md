@@ -1,4 +1,5 @@
 # [Website](https://www.devlopr.ml)
+### [⮩ Notepad](https://www.devlopr.ml/notepad)
 ### [⮩ Nice Quotes](https://www.devlopr.ml/niceQuotes)
 ### [⮩ Blocks69](https://www.devlopr.ml/Blocks69)
 ### [⮩ Random User](https://www.devlopr.ml/randomUser)
