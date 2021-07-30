@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,600;1,700&display=swap');
+
+body {
+	font-family: 'Open Sans';
+	display: flex; align-items: center;
+	background: #121212; color: #fff;
+	justify-content: center; min-height: 100vh;
+	overflow-y: hidden; font-weight: 400;
+}
+
+.container {
+	max-width: 500px; font-style: italic;
+	background: #353535; margin: auto 5px;
+	padding: 2em 2em 2em 1.5em; position: relative;
+	border-left: 8px solid #00aeff; line-height: 1.5em;
+}
+
+#author { font-style: italic; font-weight: 600; color: #00aeff; font-size: 1.5em; }
+#newQuote { max-width: 1.2em; position: absolute; bottom: 10px; right: 5px; }
+
+.loader { display: inline-block; width: 80px; height: 80px; }
+.loader:after { content: " "; display: block; width: 64px; height: 64px; margin: 8px; border-radius: 50%; border: 6px solid #fff; border-color: #fff transparent #fff transparent; animation: loaderAnim 1.2s linear infinite; }
+@keyframes loaderAnim { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); }}
