@@ -1,4 +1,6 @@
 # [Website](https://www.devlopr.ml)
+### [⮩ Nice Quotes](https://www.devlopr.ml/niceQuotes)
+### [⮩ Blocks69](https://www.devlopr.ml/Blocks69)
 ### [⮩ Random User](https://www.devlopr.ml/randomUser)
 ### [⮩ Rock Paper Scissors](https://www.devlopr.ml/rockPaperScissor)
 ### [⮩ Todo List](https://www.devlopr.ml/todoList)
