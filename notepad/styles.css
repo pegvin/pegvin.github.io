@@ -1,6 +1,6 @@
 @font-face { font-family: ubuntuMono; src: url(assets/ubuntuMono.ttf); }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; border: 0; outline: 0; }
 body {
 	background: #121212; color: #fff;
 	overflow-y: hidden; font-weight: 400;
@@ -8,14 +8,17 @@ body {
 }
 
 #textArea {
-	width: 100vw; height: 94vh; resize: none; padding: 20px 8px; font-size: 1.5em;
-	background: #353535; color: #fff; border: 0; outline: none;
+	width: 100vw; height: 94vh; resize: none; padding: 20px 8px;
+	font-size: 1.5em; background: #252525; color: #fff;
 }
 
 button {
 	width: 10vw; padding: 5px 10px; background: #121212; color: #fff;
-	height: 5.5vh; border-radius: 0; outline: 0; border: 0; cursor: pointer;
-	border-left: 1px solid #fff; font-size: 1.2em; border-bottom: 1px solid #fff;
+	height: 5.5vh; border-radius: 0; cursor: pointer; border-left: 1px solid #fff;
+	font-size: 1.2em; border-bottom: 1px solid #fff;
 }
 
-#filename { font-size: 1.2em; padding: 5px 10px; width: 70vw; height: 5.5vh; border-radius: 0; outline: 0; border: 0; }
+#filename {
+	background: #353535; color: #fff; border-bottom: 1px solid #fff;
+	font-size: 1.2em; padding: 5px 10px; width: 60vw; height: 5.5vh; border-radius: 0;
+}

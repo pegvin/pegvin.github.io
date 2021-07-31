@@ -1,7 +1,34 @@
-saveBtn = document.getElementById('save');
-copyBtn = document.getElementById('copy');
-textArea = document.getElementById('textArea');
-filenameInput = document.getElementById('filename');
+let saveBtn = document.getElementById('save');
+let copyBtn = document.getElementById('copy');
+let themeBtn = document.getElementById('theme');
+let textArea = document.getElementById('textArea');
+let filenameInput = document.getElementById('filename');
+let theme = Cookies.get("theme");
+
+if (theme === undefined) theme = "light"; Cookies.set("theme", "light");
+
+function switchTheme() {
+	if (theme == "light") {
+		textArea.style.backgroundColor = "#eeeeee";
+		textArea.style.color = "#252525";
+
+		filenameInput.style.backgroundColor = "#cccccc";
+		filenameInput.style.color = "#252525";
+		document.getElementById("themeIcon").className = "fas fa-moon";
+		theme = "dark";
+		Cookies.set("theme", "light");
+	}
+	else {
+		textArea.style.backgroundColor = "#252525";
+		textArea.style.color = "#ffffff";
+
+		filenameInput.style.backgroundColor = "#353535";
+		filenameInput.style.color = "#ffffff";
+		document.getElementById("themeIcon").className = "fas fa-sun";
+		theme = "light";
+		Cookies.set("theme", "dark");
+	}
+}
 
 function saveTextAsFile() {
 	var textToWrite = textArea.value;
@@ -27,6 +54,8 @@ function saveTextAsFile() {
 }
 
 saveBtn.addEventListener('click', saveTextAsFile);
+themeBtn.addEventListener('click', switchTheme);
 copyBtn.addEventListener('click', function(e) { navigator.clipboard.writeText(textArea.value) });
 textArea.focus();
+switchTheme();
 destroyClickedElement = (event) => { document.body.removeChild(event.target); }
