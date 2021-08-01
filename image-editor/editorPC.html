@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<title>Editor PC</title>
+	<link rel="stylesheet" href="css/tui-color-picker.min.css"/>
+	<link rel="stylesheet" href="css/tui-image-editor.min.css"/>
+	<style>
+		@import url(http://fonts.googleapis.com/css?family=Noto+Sans);
+		* { font-family: 'Noto Sans' !important; }
+		html, body { height: 100%; margin: 0; }
+	</style>
+</head>
+<body>
+<div id="tui-image-editor-container"></div>
+
+<script src="js/fabric.min.js"></script>
+<script src="js/tui-code-snippet.min.js"></script>
+<script src="js/tui-color-picker.min.js"></script>
+<script src="js/FileSaver.min.js"></script>
+<script src="js/tui-image-editor.min.js"></script>
+<script src="js/theme/black-theme.js"></script>
+
+<script>
+var imageEditor = new tui.ImageEditor('#tui-image-editor-container', {
+	includeUI: {
+		loadImage: { path: 'img/sampleImage2.png', name: 'SampleImage', },
+		theme: blackTheme, initMenu: 'filter', menuBarPosition: 'bottom',
+	},
+
+	cssMaxWidth: 700,
+	cssMaxHeight: 500,
+	usageStatistics: true,
+});
+
+window.onresize = function () { imageEditor.ui.resizeEditor(); };
+</script>
+
+</body>
+</html>
