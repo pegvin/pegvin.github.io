@@ -1,7 +1,0 @@
-/* For Centering Stuff In CodePen Without Adding the Code In it for Less Distraction */
-
-body {
-  position: absolute;
-  top: 50%, left: 50%,
-  transform: translate(-50%, -50%);
-}
