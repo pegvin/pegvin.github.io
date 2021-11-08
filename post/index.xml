@@ -1,6 +1,34 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Dev&#39;s Blog</title><link>/post/</link><description>Recent content in Posts on Dev&#39;s Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 24 Oct 2021 19:50:33 +0530</lastBuildDate><atom:link href="/post/index.xml" rel="self" type="application/rss+xml"/><item><title>Adobe Illustrator Free Alternative</title><link>/post/adobe-illustrator-free-alternative/</link><pubDate>Sun, 24 Oct 2021 19:50:33 +0530</pubDate><guid>/post/adobe-illustrator-free-alternative/</guid><description>So you want to make some illustrations and you watched some tutorials where they are using &amp;ldquo;Adobe Illustrator&amp;rdquo; which is a paid software, and now you want a free alternative of it?
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Dev&#39;s Blog</title>
+    <link>/post/</link>
+    <description>Recent content in Posts on Dev&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 24 Oct 2021 19:50:33 +0530</lastBuildDate><atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Adobe Illustrator Free Alternative</title>
+      <link>/post/adobe-illustrator-free-alternative/</link>
+      <pubDate>Sun, 24 Oct 2021 19:50:33 +0530</pubDate>
+      
+      <guid>/post/adobe-illustrator-free-alternative/</guid>
+      <description>So you want to make some illustrations and you watched some tutorials where they are using &amp;ldquo;Adobe Illustrator&amp;rdquo; which is a paid software, and now you want a free alternative of it?
 Inkscape is the answer
-What is Inkscape? Inkscape is an Open Source vector graphics editor, with capabilities similar to Adobe Illustrator, now it depends from person to person, but inkscape is has much better features and is beginner friendly.</description></item><item><title>Get a Free Domain</title><link>/post/get-a-free-domain/</link><pubDate>Sat, 23 Oct 2021 19:51:01 +0530</pubDate><guid>/post/get-a-free-domain/</guid><description>You have decided to create your website on the Internet. To do it, you must have a domain name suitable for your purposes, But you are broke and you don&amp;rsquo;t have money to pay for your domain name?
+What is Inkscape? Inkscape is an Open Source vector graphics editor, with capabilities similar to Adobe Illustrator, now it depends from person to person, but inkscape is has much better features and is beginner friendly.</description>
+    </item>
+    
+    <item>
+      <title>Get a Free Domain</title>
+      <link>/post/get-a-free-domain/</link>
+      <pubDate>Sat, 23 Oct 2021 19:51:01 +0530</pubDate>
+      
+      <guid>/post/get-a-free-domain/</guid>
+      <description>You have decided to create your website on the Internet. To do it, you must have a domain name suitable for your purposes, But you are broke and you don&amp;rsquo;t have money to pay for your domain name?
 In this post i will tell you how you can get a domain name for your website at 0 cost!
 So firstly Goto Freenom.com and Register And verify yourself
-After Registering You should see something like this:</description></item></channel></rss>
+After Registering You should see something like this:</description>
+    </item>
+    
+  </channel>
+</rss>
