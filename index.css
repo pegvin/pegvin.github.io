@@ -1,133 +1,146 @@
-@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+#themeSelector {
+	position: fixed;
+	bottom: 5px;
+	left: 5px;
+}
 
-* {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	transition: 0.25s;
+.date {
+	margin-bottom: 30px;
+	margin-top: -8px;
+	display: inline-block;
+}
+
+.updated {
+	display:inline-block;
+	font-style: italic;
+}
+.updated:before { content: " ("; }
+.updated:after { content: ")"; }
+
+.posts .post_title:before {
+	content: "- ";
+}
+
+html {
+	overflow-y: scroll;
 }
 
 body {
-	display: block;
-	height: 100%;
-	width: 100%;
-	font-family: 'Mulish', sans-serif;
-	text-align: center;
+	margin: 60px auto;
+	margin-bottom: 160px;
+	max-width: 750px;
+	line-height: 1.62;
+	font-family: 'Inconsolata', monospace;
+	background: #000000;
+	color: #E8E8E8;
+	padding:0 30px;
+}
+
+.light hr {
+	border-top: 1px solid #000;
+}
+
+.dark hr {
+	border-top: 1px solid #FFF;
+}
+
+.codeblock {
+	font-family: 'Inconsolata', monospace;
+	font-weight: bold;
+	padding: 1ch 2ch;
+}
+
+.light .codeblock {
+	border-left: 2px solid #00aeff;
+	background: #222222;
 	color: #fff;
-	background: #36b8f4;
-	user-select: none;
+	padding: 24px;
 }
 
-.container {
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	overflow: auto;
-	text-transform: uppercase;
-	width: 330px;
-	height: 480px;
-	border-radius: 5px;
-	background: #121212;
+.dark .codeblock {
+	border-left: 2px solid #FFFFFF;
+	background: #222222;
+	color: #E8E8E8;
+	padding: 24px;
 }
 
-.profile {
-	width: 150px;
-	height: 150px;
-	margin: 35px auto 25px auto;
-	border-radius: 50%;
+code {
+	font-family: 'Inconsolata', monospace;
+	font-weight: bold;
+	padding: 5px;
 }
 
-.profile img {
-	width: 150px;
-	height: 150px;
-	border-radius: 50%;
-	border: 7px solid #333;
+.light code {
+	background-color: #CCC;
+	color: #000;
 }
 
-.name {
-	color: #00aeff;
+.dark code {
+	background-color: #222222;
+	color: #FFF;
 }
 
-.icons {
-	margin-top: .3em;
-	margin-bottom: 1.2em;
+h1, h2, h3 {
+	line-height:1.2;
+	padding-top: 18px;
+	margin-bottom: 10px;
+	font-weight: normal;
 }
 
-.icons i {
-	margin-left: 5px;
-	font-size: 1.1em;
-	padding: 0.7em;
-	color:#00aeff;
-	background-color: #333333;
-	border-radius: 10%;
-}
-
-#skills {
-	display: block;
-	margin: 1.3em auto .8em auto;
-}
-
-#skills a {
+a {
+	color: #E8E8E8;
 	text-decoration: none;
-	display: inline-block;
-	margin: 2px 2px 10px 2px;
-	padding: 6px 10px;
-	color:#e4e4ea;
-	background:#333;
-	border-radius: 2px;
-	font-size: 1.1em;
+	border-bottom: 1px solid #000;
+}
+
+a:hover {
+	padding: 4px;
+	margin: -4px;
+	color: #000000;
+	background: #E8E8E8;
+	text-decoration: none;
+}
+
+ul {
 	list-style: none;
-	cursor: pointer;
+	margin: 0;
+	padding-left: 19px;
 }
 
-#skills a i {
-	font-size: 1.15em;
+ul li:before {
+	content: "- ";
+	margin-left: -2ch;
+	width: 2ch;
+	display: inline-block;
 }
 
-#skills a i.fa-js {
-	color: #ffd76a;
+img {
+	margin: 0 auto;
+	display: block;
+	max-width: 100%;
+	height: auto;
 }
 
-#skills a i.fa-golang {
-	color: #6af5ff;
+.sections {
+	counter-reset: ol-counter;
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
-@media screen and (max-width: 350px) {
-	.container {
-		position: initial;
-		transform: translate(0, 0);
-		border-radius: 0;
-		height: 100vh;
-		width: 100vw;
-	}
-	.profile {
-		margin: 15vh auto 25px auto;
-	}
+.section_item:before {
+	counter-increment: ol-counter;
+	content: "0" counter(ol-counter) ". ";
 }
 
-@media (hover: hover) and (pointer: fine) {
-	.icons a i:hover {
-		color: #FFFFFF;
-	}
-	.fa-youtube:hover {
-		background-color: #ff0000;
-		box-shadow: 0px 0px 10px #a30000;
-	}
+body::-webkit-scrollbar {
+	width: 1em;
+}
 
-	.fa-github:hover {
-		background-color: #5a32a3;
-		box-shadow: 0px 0px 10px #3f2374;
-	}
+body::-webkit-scrollbar-thumb {
+	border-right: 8px solid #ccc;
+}
 
-	.fa-twitter:hover {
-		background-color: #0088cc;
-		box-shadow: 0px 0px 10px #00699e;
-	}
-
-	#skills a:hover {
-		color: #ffffff;
-		background:#383838;
-		box-shadow: 0px 0px 10px #333;
-	}
+body::-webkit-scrollbar-thumb:hover {
+	border-right: 8px solid #aaa;
 }
