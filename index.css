@@ -1,11 +1,37 @@
-#themeSelector {
-	position: fixed;
-	bottom: 5px;
-	left: 5px;
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { overflow-y: scroll; }
+
+body {
+	margin: 60px auto;
+	max-width: 750px;
+	line-height: 1.62;
+	font-family: 'Inconsolata', monospace;
+	background: #000000;
+	color: #E8E8E8;
+	padding: 0 30px;
+}
+
+body::-webkit-scrollbar {
+	width: 1em;
+}
+
+body::-webkit-scrollbar-thumb {
+	border-right: 8px solid #ccc;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+	border-right: 8px solid #aaa;
+}
+
+hr {
+	border-top: 1px solid #FFF;
 }
 
 .date {
-	margin-bottom: 30px;
+	margin-bottom: 15px;
 	margin-top: -8px;
 	display: inline-block;
 }
@@ -21,43 +47,14 @@
 	content: "- ";
 }
 
-html {
-	overflow-y: scroll;
-}
-
-body {
-	margin: 60px auto;
-	margin-bottom: 160px;
-	max-width: 750px;
-	line-height: 1.62;
-	font-family: 'Inconsolata', monospace;
-	background: #000000;
-	color: #E8E8E8;
-	padding:0 30px;
-}
-
-.light hr {
-	border-top: 1px solid #000;
-}
-
-.dark hr {
-	border-top: 1px solid #FFF;
-}
-
 .codeblock {
+	margin: 10px 0;
 	font-family: 'Inconsolata', monospace;
 	font-weight: bold;
 	padding: 1ch 2ch;
 }
 
-.light .codeblock {
-	border-left: 2px solid #00aeff;
-	background: #222222;
-	color: #fff;
-	padding: 24px;
-}
-
-.dark .codeblock {
+.codeblock {
 	border-left: 2px solid #FFFFFF;
 	background: #222222;
 	color: #E8E8E8;
@@ -70,12 +67,7 @@ code {
 	padding: 5px;
 }
 
-.light code {
-	background-color: #CCC;
-	color: #000;
-}
-
-.dark code {
+code {
 	background-color: #222222;
 	color: #FFF;
 }
@@ -93,17 +85,19 @@ a {
 	border-bottom: 1px solid #000;
 }
 
-a:hover {
-	padding: 4px;
-	margin: -4px;
-	color: #000000;
-	background: #E8E8E8;
-	text-decoration: none;
+p, ul, ol {
+	margin-top: 10px;
+}
+
+img {
+	margin: 0 auto;
+	display: block;
+	max-width: 100%;
+	height: auto;
 }
 
 ul {
 	list-style: none;
-	margin: 0;
 	padding-left: 19px;
 }
 
@@ -114,33 +108,23 @@ ul li:before {
 	display: inline-block;
 }
 
-img {
-	margin: 0 auto;
-	display: block;
-	max-width: 100%;
-	height: auto;
-}
-
-.sections {
+ol {
 	counter-reset: ol-counter;
 	list-style: none;
-	margin: 0;
-	padding: 0;
 }
 
-.section_item:before {
+ol li:before {
 	counter-increment: ol-counter;
 	content: "0" counter(ol-counter) ". ";
 }
 
-body::-webkit-scrollbar {
-	width: 1em;
-}
 
-body::-webkit-scrollbar-thumb {
-	border-right: 8px solid #ccc;
-}
-
-body::-webkit-scrollbar-thumb:hover {
-	border-right: 8px solid #aaa;
+@media (hover: hover) and (pointer: fine) {
+	a:hover {
+		padding: 4px;
+		margin: -4px;
+		color: #000000;
+		background: #E8E8E8;
+		text-decoration: none;
+	}
 }
