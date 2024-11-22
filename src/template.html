@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{{title}}</title>
+	<link rel="icon" type="image/png" href="/favicon.png" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<style>
+		@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/liberation-mono.min.css");
+		@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+		@import "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" screen and (prefers-color-scheme: light);
+		@import "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/stackoverflow-dark.min.css" screen and (prefers-color-scheme: dark);
+
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-smooth: never;
+			font-kerning: normal;
+			font-feature-settings: kern;
+			text-rendering: optimizeLegibility;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			scroll-behavior: smooth;
+		}
+
+		:root {
+			font-size: 110%;
+			letter-spacing: -0.5px;
+			line-height: 1.3;
+			font-family: "Liberation Mono", serif;
+			tab-size: 2;
+		}
+
+		@media (prefers-color-scheme: light) {
+			body {
+				color: #000;
+				background: #FFF;
+			}
+			a, a:visited {
+				color: #00D;
+				text-decoration-color: #00D;
+			}
+			.hljs-ln-numbers {
+				color: #CCC;
+				border-right: 1px solid #CCC;
+			}
+			body > header > div > nav {
+				border-left: 1px solid rgba(0, 0, 0, 0.5);
+			}
+		}
+		@media (prefers-color-scheme: dark) {
+			body {
+				color: #D7FFCC;
+				background: #030D00;
+			}
+			a, a:visited {
+				color: #7AFF2F;
+				text-decoration-color: #7AFF2F;
+			}
+			.hljs-ln-numbers {
+				color: #4a743e;
+				border-right: 1px solid #4a743e;
+			}
+			body > header > div > nav {
+				border-left: 1px solid rgba(255, 255, 255, 0.5);
+			}
+		}
+
+		body {
+			margin: 0 auto;
+			padding: 1rem 0;
+			max-width: 44ch;
+		}
+
+		body, p, h1, h2, h3, h4, h5, h6, pre, code {
+			font-size: 1rem;
+		}
+		h1, h2, h3, h4, h5, h6 {
+			font-family: "Inter Tight", serif;
+			text-transform: capitalize;
+			font-size: 1.25rem;
+			font-weight: 600;
+			letter-spacing: 0.5px;
+			margin-top: 1.5rem;
+			margin-bottom: 1rem;
+			text-decoration: underline wavy 0.05rem;
+			text-underline-offset: 0.4rem;
+		}
+		p {
+			margin-top: 1.25rem;
+		}
+
+		ul, ol {
+			margin-top: 1rem;
+		}
+		ul {
+			padding-left: 1.5rem;
+		}
+		ol {
+			padding-left: 1.75rem;
+		}
+		ul > li:not(:first-of-type), ol > li:not(:first-of-type) {
+			margin-top: 0.25rem;
+		}
+
+		a {
+			line-height: 1.5 !important;
+			text-decoration: underline;
+			text-underline-offset: 0.17rem;
+		}
+		a:hover {
+			text-decoration: none;
+		}
+
+		img {
+			display: block;
+			margin: 0 auto;
+			max-width: 100%;
+		}
+
+		pre {
+			white-space: pre;
+		}
+		pre, code {
+			margin-top: 0.75rem;
+			overflow: auto;
+			scrollbar-width: thin;
+		}
+		pre code, pre {
+			background: none !important;
+		}
+		pre code {
+			padding: 0 !important;
+		}
+		.hljs-ln-numbers {
+			user-select: none;
+			text-align: right;
+			vertical-align: top;
+			padding-right: 0.5rem !important;
+		}
+		.hljs-ln-code {
+			white-space: pre;
+			padding-left: 0.5rem !important;
+			padding-right: 0.5rem !important;
+		}
+
+		/* UI Style */
+		.material-symbols-sharp {
+			font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+		}
+		body > header > h1 {
+			margin-top: 0;
+		}
+		body > header > div {
+			font-size: 0.95rem;
+		}
+		body > header > div > * {
+			display: inline-block;
+		}
+		body > header > div .ms-icon {
+			font-size: 1.25rem;
+		}
+		body > header > div > time {
+			opacity: 0.75;
+			margin-right: 0.6rem;
+		}
+		body > header > div > nav {
+			padding-left: 0.5rem;
+		}
+		body > header > div > nav > a:not(:first-of-type) {
+			margin-left: 0.35rem;
+		}
+		body > header > div > nav * {
+			vertical-align: middle;
+		}
+	</style>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+	<script src="/js/cache.js"></script>
+	<script src="/js/main.js"></script>
+
+	<meta property="og:locale" content="en_US">
+	<meta property="og:site_name" content="0ref's blog">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="/favicon.png">
+
+	<!-- Mastodon Verification -->
+	<link rel="me" href="https://mastodon.social/@0ref" />
+	<link rel="me" href="https://infosec.exchange/@0ref" />
+	<link rel="me" href="https://defcon.social/@0ref" />
+	<link rel="me" href="https://discuss.systems/@0ref" />
+</head>
+<body>
+	<header>
+		<h1>{{title}}</h1>
+		<div>
+			<time>{{date}}</time>
+			<nav>
+				<a aria-label="Goto Homepage" title="Goto Homepage" href="/"><span class="material-symbols-sharp ms-icon">home</span></a>
+			</nav>
+		</div>
+	</header>
+	<article>{{content}}</article>
+</body>
+</html>
