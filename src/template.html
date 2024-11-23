@@ -30,22 +30,22 @@
 			font-size: 110%;
 			letter-spacing: -0.5px;
 			line-height: 1.3;
-			font-family: "Liberation Mono", serif;
+			font-family: "Liberation Mono", monospace;
 			tab-size: 2;
 		}
 
 		@media (prefers-color-scheme: light) {
 			body {
-				color: #000;
-				background: #FFF;
+				color: #280033;
+				background: #FCF2FF;
 			}
 			a, a:visited {
-				color: #00D;
-				text-decoration-color: #00D;
+				color: #8500D0;
+				text-decoration-color: #8500D0;
 			}
 			.hljs-ln-numbers {
-				color: #CCC;
-				border-right: 1px solid #CCC;
+				color: #B58BC1;
+				border-right: 1px solid #B58BC1;
 			}
 			body > header > div > nav {
 				border-left: 1px solid rgba(0, 0, 0, 0.5);
@@ -71,26 +71,26 @@
 
 		body {
 			margin: 0 auto;
-			padding: 1rem 0;
-			max-width: 44ch;
+			padding: 1rem 0.75rem;
+			max-width: 48ch;
 		}
 
 		body, p, h1, h2, h3, h4, h5, h6, pre, code {
 			font-size: 1rem;
 		}
 		h1, h2, h3, h4, h5, h6 {
-			font-family: "Inter Tight", serif;
+			font-family: "Inter Tight", sans-serif;
 			text-transform: capitalize;
 			font-size: 1.25rem;
 			font-weight: 600;
 			letter-spacing: 0.5px;
 			margin-top: 1.5rem;
-			margin-bottom: 1rem;
-			text-decoration: underline wavy 0.05rem;
-			text-underline-offset: 0.4rem;
 		}
 		p {
-			margin-top: 1.25rem;
+			margin-top: 1.6rem;
+		}
+		h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
+			margin-top: 0.75rem;
 		}
 
 		ul, ol {
@@ -123,8 +123,6 @@
 
 		pre {
 			white-space: pre;
-		}
-		pre, code {
 			margin-top: 0.75rem;
 			overflow: auto;
 			scrollbar-width: thin;
@@ -155,6 +153,7 @@
 			margin-top: 0;
 		}
 		body > header > div {
+			margin-top: 0.25rem;
 			font-size: 0.95rem;
 		}
 		body > header > div > * {
