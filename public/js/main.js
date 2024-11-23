@@ -18,7 +18,7 @@ function Cache_Get(modName, id, maxTime /* Default 1 */) {
 }
 
 async function Cache_Set(modName, id, data) {
-	localStorage.setItem(`${modName}-${id}`, JSON.stringify({ data: data, time: GetTimeSinceEpoch_InHours() }));
+	localStorage.setItem(`${modName}-${id}`, JSON.stringify({ data: data, time: Cache_GetTimeSinceEpoch_InHours() }));
 }
 
 function ShareButtonInit() {
