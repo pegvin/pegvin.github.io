@@ -1,5 +1,5 @@
 ---
-title Linux Framebuffer in C
+title Using Linux Framebuffer in C
 date 18th Sep, 2024
 last_modified_at
 ---
