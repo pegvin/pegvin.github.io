@@ -26,7 +26,7 @@ elif [ "$CMD" = "deploy" ]; then
 	minhtml --keep-closing-tags --minify-css --minify-js --keep-spaces-between-attributes --keep-input-type-text-attr --keep-html-and-head-opening-tags $(find $BUILD -type f -name "*.html") >/dev/null # https://github.com/wilsonzlin/minify-html/
 	bunx wrangler pages deploy $BUILD --project-name 0ref --branch master --commit-dirty true --no-bundle # Deploy to Cloudflare Pages (Ensure Production Branch is Set: https://developers.cloudflare.com/pages/configuration/branch-build-controls/#production-branch-control)
 	exit 0
-elif [ "$CMD" = "list-unused" ]; then
+elif [ "$CMD" = "unused" ]; then
 	for filename in public/media/*; do
 		if ! grep -rn $(basename $filename) --exclude-dir=.git --exclude-dir="$BUILD" > /dev/null; then
 			echo "No Mention Found: $filename"
@@ -34,6 +34,6 @@ elif [ "$CMD" = "list-unused" ]; then
 	done
 	exit 0
 else
-	echo "Invalid command '$CMD', Available commands are: clean/serve/deploy or none to just build."
+	echo "Invalid command '$CMD', Available commands are: clean/serve/deploy/unused or none to just build."
 	exit 1
 fi
