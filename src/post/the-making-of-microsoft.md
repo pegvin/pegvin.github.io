@@ -1,7 +1,7 @@
 ---
 title The making of Microsoft
 date 26th Apr, 2024
-last_modified_at (Edited: 27/04/2024)
+last_modified_at 27/04/2024
 ---
 It all started when a young Bill Gates & his friend Paul Allen wanted to make a business using their programming skills.
 
@@ -39,7 +39,7 @@ MS-DOS was also open-sourced by Microsoft on April 26, 2024 and you can find the
 
 ![DIR command output in MS-DOS [5]](/media/ms-dos-dir-command.png)
 
-### Attributions
+## Attributions
 1. <https://www.digibarn.com/stories/little-oses/cpm86>
 2. [User:Retron](https://commons.wikimedia.org/wiki/File:86-DOS_running_assembler_and_HEX2BIN_(screenshot).png), Public domain, via Wikimedia Commons
 3. <https://en.wikipedia.org/wiki/File:1981BillPaul.jpg>

@@ -4,13 +4,10 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>{{title}}</title>
+	<title>{{title}} | 0ptr</title>
 	<link rel="icon" type="image/png" href="/favicon.png" />
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=check,error,home,hourglass_empty,share,thumb_up" />
 	<style>
-		@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
-		@import "/lib/hljs-11.9.0/default.min.css" screen and (prefers-color-scheme: light);
-		@import "/lib/hljs-11.9.0/stackoverflow-dark.min.css" screen and (prefers-color-scheme: dark);
+		@import "/lib/hljs-11.9.0/default.min.css";
 
 		@font-face {
 			font-family: 'Liberation Mono';
@@ -64,19 +61,22 @@
 
 		@media (prefers-color-scheme: light) {
 			body {
-				color: #280033;
-				background: #FCF2FF;
+				color: #000;
+				background: #FFF;
 			}
 			a, a:visited {
-				color: #8500D0;
-				text-decoration-color: #8500D0;
+				color: #000;
+				text-decoration-color: #000 !important;
+			}
+			code:not(pre code) {
+				color: #000 !important;
+			}
+			hr {
+				border-top: 1px solid #000;
 			}
 			.hljs-ln-numbers {
-				color: #B58BC1;
-				border-right: 1px solid #B58BC1;
-			}
-			body > header > div > nav {
-				border-left: 1px solid rgba(0, 0, 0, 0.5);
+				color: #999;
+				border-right: 1px solid #999;
 			}
 		}
 		@media (prefers-color-scheme: dark) {
@@ -85,34 +85,36 @@
 				background: #030D00;
 			}
 			a, a:visited {
-				color: #7AFF2F;
-				text-decoration-color: #7AFF2F;
+				color: inherit;
+				text-decoration-color: #5CFF00 !important;
+			}
+			code:not(pre code) {
+				color: inherit !important;
+			}
+			hr {
+				border-top: 1px solid #4A743E;
 			}
 			.hljs-ln-numbers {
 				color: #4a743e;
 				border-right: 1px solid #4a743e;
 			}
-			body > header > div > nav {
-				border-left: 1px solid rgba(255, 255, 255, 0.5);
-			}
 		}
 
 		body {
-			margin: 0 auto;
-			padding: 1rem 0.75rem;
-			max-width: 48ch;
+			margin: 1rem auto 3rem auto;
+			padding: 0 0.75rem;
+			max-width: 720px;
 		}
 
-		body, p, h1, h2, h3, h4, h5, h6, pre, code {
+		body, p, pre, code {
 			font-size: 1rem;
 		}
 		h1, h2, h3, h4, h5, h6 {
-			font-family: "Inter Tight", sans-serif;
 			text-transform: capitalize;
-			font-size: 1.25rem;
-			font-weight: 600;
+			font-weight: 400;
 			letter-spacing: 0.5px;
-			margin-top: 1.5rem;
+			margin-top: 1.75rem;
+			margin-bottom: 0.625rem;
 		}
 		p {
 			margin-top: 1.6rem;
@@ -125,13 +127,22 @@
 			margin-top: 1rem;
 		}
 		ul {
-			padding-left: 1.5rem;
+			padding-left: 1.25rem;
 		}
 		ol {
 			padding-left: 1.75rem;
 		}
 		ul > li:not(:first-of-type), ol > li:not(:first-of-type) {
 			margin-top: 0.25rem;
+		}
+		ul {
+			list-style: none;
+		}
+		ul li:before {
+			content: "- ";
+			margin-left: -2ch;
+			width: 2ch;
+			display: inline-block;
 		}
 
 		a {
@@ -150,16 +161,20 @@
 		}
 
 		pre {
-			white-space: pre;
-			margin-top: 0.75rem;
 			overflow: auto;
 			scrollbar-width: thin;
+			white-space: pre;
+			margin-top: 1rem;
+			margin-left: 0.5rem;
 		}
 		pre code, pre {
 			background: none !important;
 		}
 		pre code {
 			padding: 0 !important;
+		}
+		code:not(pre code) {
+			font-weight: bold;
 		}
 		.hljs-ln-numbers {
 			user-select: none;
@@ -173,40 +188,33 @@
 			padding-right: 0.5rem !important;
 		}
 
-		/* UI Style */
-		.material-symbols-sharp {
-			font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+		body > nav > a, body > nav > a:hover {
+			text-decoration: none;
 		}
-		body > header > h1 {
-			margin-top: 0;
-		}
-		body > header > div {
-			margin-top: 0.25rem;
-			font-size: 0.95rem;
-		}
-		body > header > div > * {
-			display: inline-block;
-		}
-		body > header > div .ms-icon {
-			font-size: 1.25rem;
+		body > nav > a:not(:first-of-type) {
+			margin-left: 1ch;
 		}
 		body > header > div > time {
+			display: inline;
+			font-size: 0.9rem;
 			opacity: 0.75;
-			margin-right: 0.6rem;
 		}
-		body > header > div > nav {
-			padding-left: 0.5rem;
+		body > header > div > time.modified_on {
+			font-style: italic;
+			margin-left: 0.5rem;
 		}
-		body > header > div > nav > a:not(:first-of-type) {
-			margin-left: 0.35rem;
+		body > header > div > time:empty {
+			display: none;
 		}
-		body > header > div > nav * {
-			vertical-align: middle;
+		body > header > div > time.modified_on:before {
+			content: "(Edited: "
+		}
+		body > header > div > time.modified_on:after {
+			content: ")";
 		}
 	</style>
 	<script src="/lib/hljs-11.9.0/highlight.min.js"></script>
 	<script src="/lib/hljs-line-numbers-2.8.0/highlightjs-line-numbers.min.js"></script>
-	<script src="/js/cache.js"></script>
 	<script src="/js/main.js"></script>
 
 	<meta property="og:locale" content="en_US">
@@ -221,13 +229,14 @@
 	<link rel="me" href="https://discuss.systems/@0ref" />
 </head>
 <body>
+	<nav>
+		<a href="/">home();</a>
+	</nav>
 	<header>
 		<h1>{{title}}</h1>
 		<div>
 			<time>{{date}}</time>
-			<nav>
-				<a aria-label="Goto Homepage" title="Goto Homepage" href="/"><span class="material-symbols-sharp ms-icon">home</span></a>
-			</nav>
+			<time class="modified_on">{{last_modified_at}}</time>
 		</div>
 	</header>
 	<article>{{content}}</article>

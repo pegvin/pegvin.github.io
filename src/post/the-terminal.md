@@ -35,7 +35,7 @@ If you've used a Terminal, it's most likely that you've used what's called a _Te
 
 ![xterm terminal emulator running on linux](/media/xterm-terminal-emulator-on-linux.png)
 
-### Attributions
+## Attributions
 - [1]: ArnoldReinhold, [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0), via Wikimedia Commons.
 - [2]: nn, Public domain, via Wikimedia Commons.
 - [3]: Autopilot, [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0), via Wikimedia Commons.

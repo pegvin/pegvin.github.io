@@ -1,11 +1,11 @@
 ---
 title This is a test post for my blog
 date 17th Apr, 2024
-last_modified_at (Edited: 01/04/2024)
+last_modified_at 01/04/2024
 ---
 ## Nosti, credo, illud: Nemo pius est, qui pietatem-;
 
-{{ include "img.vto" { width: "40%", alt: `"8 Bits Visits His Roots" by pixilized at lospec.com`, src: "https://cdn.lospec.com/gallery/8bits-visits-his-roots-514080.png" } }}
+!["8 Bits Visits His Roots" by pixilized at lospec.com](https://cdn.lospec.com/gallery/8bits-visits-his-roots-514080.png)
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. [Bestiarum vero nullum iudicium puto.](http://loripsum.net/) Duo Reges: constructio interrete. Quam ob rem tandem, inquit, non satisfacit? Tubulum fuisse, qua illum, cuius is condemnatus est rogatione, P. Haec quo modo conveniant, non sane intellego. `De quibus cupio scire` quid sentias.
 
