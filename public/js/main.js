@@ -29,7 +29,7 @@ function ShareButtonInit() {
 	});
 }
 
-window.addEventListener("load", function() {
+window.addEventListener("load", async function() {
 	if (window.location.pathname.startsWith("/post/")) {
 		ShareButtonInit();
 	}
