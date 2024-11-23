@@ -151,12 +151,10 @@ code:not(pre code) {
 	padding-right: 0.5rem !important;
 }
 
-body > nav > a, body > nav > a:hover {
-	text-decoration: none;
-}
 body > nav > a:not(:first-of-type) {
 	margin-left: 1ch;
 }
+
 body > header > div > time {
 	display: inline;
 	font-size: 0.9rem;
