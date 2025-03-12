@@ -86,14 +86,8 @@ ol {
 ul > li:not(:first-of-type), ol > li:not(:first-of-type) {
 	margin-top: 0.25rem;
 }
-ul {
-	list-style: none;
-}
-ul li:before {
-	content: "- ";
-	margin-left: -2ch;
-	width: 2ch;
-	display: inline-block;
+li::marker {
+	color: #666;
 }
 
 a, a:visited {
@@ -139,8 +133,8 @@ code:not(pre code) {
 	text-align: right;
 	vertical-align: top;
 	padding-right: 0.5rem !important;
-	color: #999;
-	border-right: 1px solid #999;
+	color: #666;
+	border-right: 1px solid #666;
 }
 .hljs-ln-code {
 	white-space: pre;
