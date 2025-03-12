@@ -127,7 +127,7 @@ function LikeButtonInit() {
 	link.addEventListener("click", _OnClick);
 }
 
-window.addEventListener("load", async function() {
+window.addEventListener("load", function() {
 	if (window.location.pathname.startsWith("/post/")) {
 		ShareButtonInit();
 		LikeButtonInit();
