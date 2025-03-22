@@ -111,6 +111,23 @@ img {
 	max-width: 100%;
 }
 
+table:not(.hljs-ln) {
+	border-collapse: collapse;
+	margin: 1rem auto 0 auto;
+}
+table:not(.hljs-ln) th,
+table:not(.hljs-ln) td {
+	padding: 0.15rem 0.5rem;
+}
+table:not(.hljs-ln) tr:not(:last-of-type),
+table:not(.hljs-ln) tr:first-of-type {
+	border-bottom: 1px solid #000 !important;
+}
+table:not(.hljs-ln) tr th:not(:last-of-type),
+table:not(.hljs-ln) tr td:not(:last-of-type) {
+	border-right: 1px solid #000;
+}
+
 pre {
 	overflow: auto;
 	scrollbar-width: thin;

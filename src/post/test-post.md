@@ -28,6 +28,99 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam si amitti vita beat
 
 In eo enim positum est id, quod dicimus esse expetendum. Magni enim aestimabat pecuniam non modo non contra leges, sed etiam legibus partam. `Minime vero istorum` quidem, inquit.
 
+<table>
+	<thead>
+		<tr>
+			<th>Operator</th>
+			<th>Associativity</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+				<code>()</code>
+			</td>
+			<td>Left To Right</td>
+		</tr>
+		<tr>
+			<td>
+				<code>**</code>
+			</td>
+			<td>Right To Left</td>
+		</tr>
+		<tr>
+			<td>
+				<code>*</code>
+				<code>/</code>
+				<code>//</code>
+				<code>%</code>
+			</td>
+			<td>Left To Right</td>
+		</tr>
+		<tr>
+			<td>
+				<code>+</code>
+				<code>-</code>
+			</td>
+			<td>Left To Right</td>
+		</tr>
+		<tr>
+			<td>
+				<code>&lt;&lt;</code>
+				<code>&gt;&gt;</code>
+			</td>
+			<td>Left To Right</td>
+		</tr>
+		<tr>
+			<td>
+				<code>&amp;</code>
+			</td>
+			<td>Left To Right</td>
+		</tr>
+		<tr>
+			<td>
+				<code>^</code>
+			</td>
+			<td>Left To Right</td>
+		</tr>
+		<tr>
+			<td>
+				<code>|</code>
+			</td>
+			<td>Left To Right</td>
+		</tr>
+		<tr>
+			<td>
+				<code>==</code>
+				<code>!=</code>
+				<code>&gt;</code>
+				<code>&gt;=</code>
+				<code>&lt;</code>
+				<code>&lt;=</code>
+			</td>
+			<td>Left To Right</td>
+		</tr>
+		<tr>
+			<td>
+				<code>not</code>
+			</td>
+			<td>Left To Right</td>
+		</tr>
+		<tr>
+			<td>
+				<code>and</code>
+			</td>
+			<td>Left To Right</td>
+		</tr>
+		<tr>
+			<td>
+				<code>or</code>
+			</td>
+			<td>Left To Right</td>
+		</tr>
+	</tbody>
+</table>
+
 #### Vos autem cum perspicuis dubia
 `Id Sextilius factum` negabat. Quae cum ita sint, effectum est nihil esse malum, quod turpe non sit. Videmus in quodam volucrium genere non nulla indicia pietatis, cognitionem, memoriam, in multis etiam desideria videmus. Quis est enim, in quo sit cupiditas, quin recte cupidus dici possit? Quis enim redargueret?
 
