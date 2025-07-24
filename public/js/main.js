@@ -53,7 +53,7 @@ function ShareButtonInit() {
 }
 
 function LikeButtonInit() {
-	if ((new URL(window.location)).hostname != "0ref.pages.dev") return;
+	if ((new URL(window.location)).hostname != "pegv.in") return;
 
 	function _SetLike(btn, likes) {
 		btn.innerText = `${likes} ${likes == 0 ? "Likes" : (likes == 1 ? "Like" : "Likes")}`;
