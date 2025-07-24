@@ -102,7 +102,15 @@ a:hover {
 }
 
 hr {
+	margin-top: 1.5rem;
 	border-top: 1px solid #000;
+}
+
+blockquote {
+	opacity: 0.8;
+	margin: 0 0.5rem;
+	padding: 0 0.5rem;
+	border-left: 1px solid #000;
 }
 
 img, iframe {
