@@ -6,24 +6,28 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
-      - name: Build static files
-        id: build
-        run: |
-          mkdir bin
-          curl -L https://codeberg.org/0ref/jelly/releases/download/0.1.1/jelly-linux-x86_64 -o ./bin/jelly
-          curl -L https://github.com/wilsonzlin/minify-html/releases/download/v0.16.4/minhtml-0.16.4-x86_64-unknown-linux-gnu -o ./bin/minhtml
-          chmod +x ./bin/jelly
-          chmod +x ./bin/minhtml
-          export PATH="./bin:$PATH"
-          ./build.sh deploy
+    - name: Checkout
+      uses: actions/checkout@v4
 
-      - name: Upload static files as artifact
-        id: deployment
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: build/
+    - name: Build static files
+      id: build
+      run: |
+        sudo apt install libcmark-dev
+        mkdir bin
+        curl -L https://codeberg.org/0ref/jelly/releases/download/0.1.1/jelly-linux-x86_64 -o ./bin/jelly
+        curl -L https://github.com/wilsonzlin/minify-html/releases/download/v0.16.4/minhtml-0.16.4-x86_64-unknown-linux-gnu -o ./bin/minhtml
+        chmod +x ./bin/jelly
+        chmod +x ./bin/minhtml
+        export PATH="./bin:$PATH"
+        ./build.sh deploy
+
+    - name: Upload static files as artifact
+      id: deployment
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: build/
 
   deploy:
     environment:
@@ -32,6 +36,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4
