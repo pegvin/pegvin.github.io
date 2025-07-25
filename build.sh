@@ -28,7 +28,7 @@ elif [ "$CMD" = "deploy" ]; then
 	touch "$BUILD/.release" # A "marker" to tell whether the build was created for deploying
 	echo "dh=9720cdc0e4182c89303fed43db7d1ac4f0a95e1b" > "$BUILD/.well-known/discord"
 	minhtml --keep-closing-tags --minify-css --minify-js --keep-spaces-between-attributes --keep-input-type-text-attr --keep-html-and-head-opening-tags $(find $BUILD -type f -name "*.html") >/dev/null # https://github.com/wilsonzlin/minify-html/
-	bunx wrangler pages deploy $BUILD --project-name 0ref --branch master --commit-dirty true --no-bundle # Deploy to Cloudflare Pages (Ensure Production Branch is Set: https://developers.cloudflare.com/pages/configuration/branch-build-controls/#production-branch-control)
+	# bunx wrangler pages deploy $BUILD --project-name 0ref --branch master --commit-dirty true --no-bundle # Deploy to Cloudflare Pages (Ensure Production Branch is Set: https://developers.cloudflare.com/pages/configuration/branch-build-controls/#production-branch-control)
 	exit 0
 elif [ "$CMD" = "unused" ]; then
 	for filename in public/media/*; do
