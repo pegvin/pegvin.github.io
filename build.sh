@@ -16,10 +16,10 @@ elif [ "$CMD" = "serve" ]; then
 	exit 0
 elif [ "$CMD" = "deploy" ]; then
 	# Check if there are commits to push: https://stackoverflow.com/a/48354942/14516016
-	if git merge-base --is-ancestor HEAD @{u}; then
-		echo "Nothing to deploy!"
-		exit 1
-	fi
+	# if git merge-base --is-ancestor HEAD @{u}; then
+	# 	echo "Nothing to deploy!"
+	# 	exit 1
+	# fi
 
 	./build.sh clean
 	jelly -i src/ -o $BUILD
