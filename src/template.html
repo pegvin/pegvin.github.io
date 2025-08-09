@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{{title}} | pegvin</title>
+	<link rel="icon" type="image/png" href="/favicon.png" />
+	<link rel="stylesheet" type="text/css" href="https://unpkg.com/ress/dist/ress.min.css" />
+	<link rel="stylesheet" type="text/css" href="/css/styles.css" />
+	<script src="/lib/hljs-11.9.0/highlight.min.js"></script>
+	<script src="/lib/hljs-line-numbers-2.8.0/highlightjs-line-numbers.min.js" async></script>
+	<script src="/js/main.js" async></script>
+
+	<meta property="og:locale" content="en_US">
+	<meta property="og:site_name" content="pegvin's blog">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="/favicon.png">
+
+	<!-- Mastodon Verification -->
+	<link rel="me" href="https://mastodon.social/@0ref" />
+	<link rel="me" href="https://infosec.exchange/@0ref" />
+	<link rel="me" href="https://defcon.social/@0ref" />
+	<link rel="me" href="https://discuss.systems/@0ref" />
+</head>
+<body>
+	<nav>
+		<a href="/">Home</a>
+	</nav>
+	<header>
+		<h1>{{title}}</h1>
+		<div>
+			<time>{{date}}</time>
+			<time class="modified_on">{{last_modified_at}}</time>
+		</div>
+	</header>
+	<article>{{content}}</article>
+</body>
+</html>

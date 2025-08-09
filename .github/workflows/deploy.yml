@@ -1,0 +1,46 @@
+name: Build & Deploy On GitHub Pages
+
+on:
+  push:
+    branches: ["master"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Build static files
+        id: build
+        run: |
+          sudo apt install libcmark-dev
+          mkdir bin
+          curl -L https://codeberg.org/0ref/jelly/releases/download/0.1.1/jelly-linux-x86_64 -o ./bin/jelly
+          curl -L https://github.com/wilsonzlin/minify-html/releases/download/v0.15.0/minhtml-0.15.0-x86_64-unknown-linux-gnu -o ./bin/minhtml
+          chmod +x ./bin/jelly
+          chmod +x ./bin/minhtml
+          export PATH="./bin:$PATH"
+          ./build.sh deploy
+          echo "pegv.in" > ./build/CNAME
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './build/'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

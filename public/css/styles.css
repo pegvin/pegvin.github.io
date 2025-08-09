@@ -1,0 +1,191 @@
+@import "/lib/hljs-11.9.0/default.min.css";
+
+@font-face {
+	font-family: 'Liberation Mono';
+	src: url('/fonts/liberation-mono/LiberationMono.woff2') format('woff2'), url('/fonts/liberation-mono/LiberationMono.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap
+}
+@font-face {
+	font-family: 'Liberation Mono';
+	src: url('/fonts/liberation-mono/LiberationMono-Italic.woff2') format('woff2'), url('/fonts/liberation-mono/LiberationMono-Italic.woff') format('woff');
+	font-weight: 400;
+	font-style: italic;
+	font-display: swap
+}
+@font-face {
+	font-family: 'Liberation Mono';
+	src: url('/fonts/liberation-mono/LiberationMono-Bold.woff2') format('woff2'), url('/fonts/liberation-mono/LiberationMono-Bold.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap
+}
+@font-face {
+	font-family: 'Liberation Mono';
+	src: url('/fonts/liberation-mono/LiberationMono-BoldItalic.woff2') format('woff2'), url('/fonts/liberation-mono/LiberationMono-BoldItalic.woff') format('woff');
+	font-weight: 700;
+	font-style: italic;
+	font-display: swap
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-smooth: never;
+	font-kerning: normal;
+	font-feature-settings: kern;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	scroll-behavior: smooth;
+}
+
+:root {
+	font-size: 110%;
+	letter-spacing: -0.5px;
+	line-height: 1.3;
+	font-family: "Liberation Mono", monospace;
+	tab-size: 2;
+}
+
+body {
+	color: #000;
+	background: #FFF;
+	margin: 1rem auto 3rem auto;
+	padding: 0 0.75rem;
+	max-width: 720px;
+}
+
+body, p, pre, code {
+	font-size: 1rem;
+}
+h1, h2, h3, h4, h5, h6 {
+	text-transform: capitalize;
+	font-weight: 400;
+	letter-spacing: 0.5px;
+	margin-top: 1.75rem;
+}
+p {
+	margin-top: 1.5rem;
+}
+h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
+	margin-top: 0.5rem;
+}
+
+ul, ol {
+	margin-top: 1rem;
+}
+ul {
+	padding-left: 1.25rem;
+}
+ol {
+	padding-left: 1.75rem;
+}
+ul > li:not(:first-of-type), ol > li:not(:first-of-type) {
+	margin-top: 0.25rem;
+}
+li::marker {
+	color: #666;
+}
+
+a, a:visited {
+	color: #000;
+	text-decoration-color: #000 !important;
+	line-height: 1.5 !important;
+	text-decoration: underline;
+	text-underline-offset: 0.17rem;
+}
+a:hover {
+	text-decoration: none;
+}
+
+hr {
+	margin-top: 1.5rem;
+	border-top: 1px solid #000;
+}
+
+blockquote {
+	opacity: 0.8;
+	margin: 0 0.5rem;
+	padding: 0 0.5rem;
+	border-left: 1px solid #000;
+}
+
+img, iframe {
+	display: block;
+	margin: 0 auto;
+	max-width: 100%;
+}
+
+table:not(.hljs-ln) {
+	border-collapse: collapse;
+	margin: 1rem auto 0 auto;
+}
+table:not(.hljs-ln) th,
+table:not(.hljs-ln) td {
+	padding: 0.15rem 0.5rem;
+}
+table:not(.hljs-ln) tr:not(:last-of-type),
+table:not(.hljs-ln) tr:first-of-type {
+	border-bottom: 1px solid #000 !important;
+}
+table:not(.hljs-ln) tr th:not(:last-of-type),
+table:not(.hljs-ln) tr td:not(:last-of-type) {
+	border-right: 1px solid #000;
+}
+
+pre {
+	overflow: auto;
+	scrollbar-width: thin;
+	white-space: pre;
+	margin-top: 1rem;
+	margin-left: 0.5rem;
+}
+pre code, pre {
+	background: none !important;
+}
+pre code {
+	padding: 0 !important;
+}
+code:not(pre code) {
+	color: #000 !important;
+	font-weight: bold;
+}
+.hljs-ln-numbers {
+	user-select: none;
+	text-align: right;
+	vertical-align: top;
+	padding-right: 0.5rem !important;
+	color: #666;
+	border-right: 1px solid #666;
+}
+.hljs-ln-code {
+	white-space: pre;
+	padding-left: 0.5rem !important;
+	padding-right: 0.5rem !important;
+}
+
+body > nav > a:not(:first-of-type) {
+	margin-left: 1ch;
+}
+
+body > header > div > time {
+	display: inline;
+	font-size: 0.9rem;
+	opacity: 0.75;
+}
+body > header > div > time.modified_on {
+	font-style: italic;
+	margin-left: 0.5rem;
+}
+body > header > div > time:empty {
+	display: none;
+}
+body > header > div > time.modified_on:before {
+	content: "(Edited: "
+}
+body > header > div > time.modified_on:after {
+	content: ")";
+}
