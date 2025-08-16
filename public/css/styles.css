@@ -1,37 +1,7 @@
 @import "/lib/hljs-11.9.0/default.min.css";
-
-@font-face {
-	font-family: 'Liberation Mono';
-	src: url('/fonts/liberation-mono/LiberationMono.woff2') format('woff2'), url('/fonts/liberation-mono/LiberationMono.woff') format('woff');
-	font-weight: 400;
-	font-style: normal;
-	font-display: swap
-}
-@font-face {
-	font-family: 'Liberation Mono';
-	src: url('/fonts/liberation-mono/LiberationMono-Italic.woff2') format('woff2'), url('/fonts/liberation-mono/LiberationMono-Italic.woff') format('woff');
-	font-weight: 400;
-	font-style: italic;
-	font-display: swap
-}
-@font-face {
-	font-family: 'Liberation Mono';
-	src: url('/fonts/liberation-mono/LiberationMono-Bold.woff2') format('woff2'), url('/fonts/liberation-mono/LiberationMono-Bold.woff') format('woff');
-	font-weight: 700;
-	font-style: normal;
-	font-display: swap
-}
-@font-face {
-	font-family: 'Liberation Mono';
-	src: url('/fonts/liberation-mono/LiberationMono-BoldItalic.woff2') format('woff2'), url('/fonts/liberation-mono/LiberationMono-BoldItalic.woff') format('woff');
-	font-weight: 700;
-	font-style: italic;
-	font-display: swap
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
 * {
-	margin: 0;
-	padding: 0;
 	box-sizing: border-box;
 	font-smooth: never;
 	font-kerning: normal;
@@ -40,77 +10,59 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	scroll-behavior: smooth;
-}
-
-:root {
-	font-size: 110%;
-	letter-spacing: -0.5px;
-	line-height: 1.3;
-	font-family: "Liberation Mono", monospace;
+	font-family: "Roboto Mono", monospace;
 	tab-size: 2;
 }
 
 body {
-	color: #000;
-	background: #FFF;
-	margin: 1rem auto 3rem auto;
-	padding: 0 0.75rem;
-	max-width: 720px;
-}
-
-body, p, pre, code {
-	font-size: 1rem;
-}
-h1, h2, h3, h4, h5, h6 {
-	text-transform: capitalize;
-	font-weight: 400;
-	letter-spacing: 0.5px;
-	margin-top: 1.75rem;
-}
-p {
-	margin-top: 1.5rem;
-}
-h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
-	margin-top: 0.5rem;
+	margin: 0 auto;
+	max-width: 65ch;
+	color: #FFFFE3;
+	background: #181714;
+	font-size: 100%;
+	line-height: 1.5;
 }
 
 ul, ol {
-	margin-top: 1rem;
-}
-ul {
-	padding-left: 1.25rem;
-}
-ol {
-	padding-left: 1.75rem;
-}
-ul > li:not(:first-of-type), ol > li:not(:first-of-type) {
-	margin-top: 0.25rem;
-}
-li::marker {
-	color: #666;
+	line-height: 1.75;
 }
 
-a, a:visited {
-	color: #000;
-	text-decoration-color: #000 !important;
-	line-height: 1.5 !important;
+a {
+	color: inherit;
 	text-decoration: underline;
-	text-underline-offset: 0.17rem;
+	text-underline-offset: 0.25rem;
 }
 a:hover {
 	text-decoration: none;
 }
 
+pre {
+	padding: 0.5rem;
+}
+
+code:not(pre code) {
+	line-height: 2;
+	padding: 0.075rem 0.25rem;
+}
+
+pre, code:not(pre code) {
+	overflow: auto;
+	border: 1px solid #8E8E7B;
+}
+
 hr {
 	margin-top: 1.5rem;
-	border-top: 1px solid #000;
+	border-top: 1px solid #FFFFE3;
 }
 
 blockquote {
-	opacity: 0.8;
-	margin: 0 0.5rem;
-	padding: 0 0.5rem;
-	border-left: 1px solid #000;
+	margin: 0 1rem;
+	padding: 0.5rem;
+	border-left: 1px solid #8E8E7B;
+}
+
+blockquote p {
+	margin: 0;
 }
 
 img, iframe {
@@ -119,47 +71,13 @@ img, iframe {
 	max-width: 100%;
 }
 
-table:not(.hljs-ln) {
-	border-collapse: collapse;
-	margin: 1rem auto 0 auto;
-}
-table:not(.hljs-ln) th,
-table:not(.hljs-ln) td {
-	padding: 0.15rem 0.5rem;
-}
-table:not(.hljs-ln) tr:not(:last-of-type),
-table:not(.hljs-ln) tr:first-of-type {
-	border-bottom: 1px solid #000 !important;
-}
-table:not(.hljs-ln) tr th:not(:last-of-type),
-table:not(.hljs-ln) tr td:not(:last-of-type) {
-	border-right: 1px solid #000;
-}
-
-pre {
-	overflow: auto;
-	scrollbar-width: thin;
-	white-space: pre;
-	margin-top: 1rem;
-	margin-left: 0.5rem;
-}
-pre code, pre {
-	background: none !important;
-}
-pre code {
-	padding: 0 !important;
-}
-code:not(pre code) {
-	color: #000 !important;
-	font-weight: bold;
-}
 .hljs-ln-numbers {
 	user-select: none;
 	text-align: right;
 	vertical-align: top;
 	padding-right: 0.5rem !important;
-	color: #666;
-	border-right: 1px solid #666;
+	color: #8E8E7B;
+	border-right: 1px solid #8E8E7B;
 }
 .hljs-ln-code {
 	white-space: pre;
@@ -167,10 +85,35 @@ code:not(pre code) {
 	padding-right: 0.5rem !important;
 }
 
+table:not(.hljs-ln) {
+	border-collapse: collapse;
+	margin: 1rem auto 0 auto;
+}
+table:not(.hljs-ln) th,
+table:not(.hljs-ln) td {
+	padding: 0.2rem 1rem;
+}
+table:not(.hljs-ln) tr:not(:last-of-type),
+table:not(.hljs-ln) tr:first-of-type {
+	border-bottom: 1px solid #8E8E7B !important;
+}
+table:not(.hljs-ln) tr th:not(:last-of-type),
+table:not(.hljs-ln) tr td:not(:last-of-type) {
+	border-right: 1px solid #8E8E7B;
+}
+
+body > nav {
+	margin-top: 0.75rem;
+}
 body > nav > a:not(:first-of-type) {
 	margin-left: 1ch;
 }
-
+body > header {
+	margin-bottom: 1.5rem;
+}
+body > header > h1 {
+	margin-bottom: 0.5rem;
+}
 body > header > div > time {
 	display: inline;
 	font-size: 0.9rem;

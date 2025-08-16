@@ -7,9 +7,9 @@ last_modified_at 01/04/2024
 
 !["8 Bits Visits His Roots" by pixilized at lospec.com](https://cdn.lospec.com/gallery/8bits-visits-his-roots-514080.png)
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. [Bestiarum vero nullum iudicium puto.](http://loripsum.net/) Duo Reges: constructio interrete. Quam ob rem tandem, inquit, non satisfacit? Tubulum fuisse, qua illum, cuius is condemnatus est rogatione, P. Haec quo modo conveniant, non sane intellego. `De quibus cupio scire` quid sentias.
+Lorem ipsum dolor sit amet, _consectetur_ adipiscing elit. [Bestiarum vero nullum iudicium puto.](http://loripsum.net/) Duo Reges: constructio interrete. Quam ob rem tandem, inquit, non satisfacit? Tubulum fuisse, qua illum, cuius is condemnatus est rogatione, P. Haec quo modo conveniant, non sane intellego. `De quibus cupio scire` quid sentias.
 
-An potest, inquit ille, quicquam esse suavius quam nihil dolere? Itaque eos id agere, ut a se dolores, morbos, debilitates repellant. Quacumque enim ingredimur, in aliqua historia vestigium ponimus. Ego quoque, inquit, didicerim libentius si quid attuleris, quam te reprehenderim.
+An potest, inquit ille, quicquam esse _**suavius**_ quam nihil dolere? Itaque eos id agere, ut a se dolores, morbos, debilitates repellant. Quacumque enim ingredimur, in aliqua historia vestigium ponimus. Ego quoque, inquit, didicerim libentius si quid attuleris, quam te reprehenderim.
 
 1. Sunt enim prima elementa naturae, quibus auctis vírtutis quasi germen efficitur.
 2. Nec mihi illud dixeris: Haec enim ipsa mihi sunt voluptati, et erant illa Torquatis.
