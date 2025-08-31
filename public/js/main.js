@@ -22,7 +22,7 @@ async function Cache_Set(modName, id, data) {
 }
 
 function ShareButtonInit() {
-	let nav = document.querySelector("body > nav");
+	let nav = document.querySelector("body > header > nav");
 	if (!nav) return;
 
 	let link = document.createElement("a");

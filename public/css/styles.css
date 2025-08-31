@@ -23,6 +23,25 @@ body {
 	line-height: 1.5;
 }
 
+h1 {
+	border-bottom: 1px solid #FFFFE3;
+	padding-bottom: 0.5rem;
+}
+h2, h3, h4, h5, h6 {
+	text-decoration: underline;
+	text-underline-offset: 0.5rem;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-size: 1.1rem;
+	font-weight: normal;
+}
+h1:before { content: "# "; }
+h2:before { content: "## "; }
+h3:before { content: "### "; }
+h4:before { content: "#### "; }
+h5:before { content: "##### "; }
+h6:before { content: "###### "; }
+
 ul, ol {
 	line-height: 1.75;
 }
@@ -102,33 +121,35 @@ table:not(.hljs-ln) tr td:not(:last-of-type) {
 	border-right: 1px solid #8E8E7B;
 }
 
-body > nav {
-	margin-top: 0.75rem;
-}
-body > nav > a:not(:first-of-type) {
-	margin-left: 1ch;
-}
 body > header {
+	margin: 0.75rem 0;
 	margin-bottom: 1.5rem;
-}
-body > header > h1 {
-	margin-bottom: 0.5rem;
-}
-body > header > div > time {
-	display: inline;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 	font-size: 0.9rem;
-	opacity: 0.75;
+	text-transform: uppercase;
 }
-body > header > div > time.modified_on {
-	font-style: italic;
-	margin-left: 0.5rem;
+
+body > header > nav {
+	display: flex;
+	flex-direction: row;
+	gap: 1ch;
 }
-body > header > div > time:empty {
+
+body > header > div {
+	display: flex;
+	flex-direction: column;
+	align-items: end;
+}
+
+body > header > div time:empty {
 	display: none;
 }
-body > header > div > time.modified_on:before {
-	content: "(Edited: "
+
+body > header > div time.modified_on:before {
+	content: "Updated: "
 }
-body > header > div > time.modified_on:after {
-	content: ")";
+body > header > div time.modified_on:after {
+	content: "";
 }
