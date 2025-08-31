@@ -21,6 +21,43 @@ async function Cache_Set(modName, id, data) {
 	localStorage.setItem(`${modName}-${id}`, JSON.stringify({ data: data, time: Cache_GetTimeSinceEpoch_InHours() }));
 }
 
+function ThemeButtonInit() {
+	let nav = document.querySelector("body > header > nav");
+	if (!nav) return;
+
+	const cached_theme = Cache_Get("main.js", "page-theme", 876600) || "system";
+
+	let select = document.createElement("select");
+	select.setAttribute("tabindex", "0");
+	select.setAttribute("aria-pressed", "false");
+	select.setAttribute("aria-label", "Select Theme");
+	select.setAttribute("title", "Select Theme");
+
+	select.addEventListener("change", function(e) {
+		const v = select.value.toLowerCase();
+		switch (v) {
+			case "system": document.querySelector("html").className = ""; break;
+			case "light":  document.querySelector("html").className = "force-light"; break;
+			case "dark":   document.querySelector("html").className = "force-dark"; break;
+		}
+		Cache_Set("main.js", "page-theme", v);
+	});
+
+	[ "System", "Light", "Dark" ].forEach(function(v, i) {
+		let option = document.createElement("option");
+		option.setAttribute("value", v.toLowerCase());
+		option.innerText = v;
+		select.appendChild(option);
+
+		if (v.toLowerCase() == cached_theme) {
+			select.value = v.toLowerCase();
+			select.dispatchEvent(new Event("change"));
+		}
+	});
+
+	nav.appendChild(select);
+}
+
 function ShareButtonInit() {
 	let nav = document.querySelector("body > header > nav");
 	if (!nav) return;
@@ -61,7 +98,7 @@ function LikeButtonInit() {
 
 	const WORKER_URL = new URL("https://minianal-like.0ref.workers.dev/");
 	let link = document.createElement("a");
-	let nav = document.querySelector("body > nav");
+	let nav = document.querySelector("body > header > nav");
 
 	link.innerText = "Like";
 	link.setAttribute("href", "#");
@@ -131,6 +168,7 @@ window.addEventListener("load", function() {
 	if (window.location.pathname.startsWith("/post/")) {
 		ShareButtonInit();
 		LikeButtonInit();
+		ThemeButtonInit();
 	}
 
 	if (typeof hljs != 'undefined') {

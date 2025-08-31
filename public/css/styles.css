@@ -14,21 +14,42 @@
 	tab-size: 2;
 }
 
+html, html.force-light {
+	--bg: #FFFFE3;
+	--fg: #000;
+	--dim: #777;
+}
+
+@media (prefers-color-scheme: dark) {
+	html {
+		--fg: #FFFFE3;
+		--bg: #181714;
+		--dim: #8E8E7B;
+	}
+}
+
+html.force-dark {
+	--fg: #FFFFE3;
+	--bg: #181714;
+	--dim: #8E8E7B;
+}
+
 body {
 	margin: 0 auto;
 	max-width: 65ch;
-	color: #FFFFE3;
-	background: #181714;
+	color: var(--fg);
+	background: var(--bg);
 	font-size: 100%;
 	line-height: 1.5;
 }
 
 h1 {
-	border-bottom: 1px solid #FFFFE3;
+	border-bottom: 1px solid var(--fg);
 	padding-bottom: 0.5rem;
 }
 h2, h3, h4, h5, h6 {
 	text-decoration: underline;
+	text-decoration-color: var(--fg);
 	text-underline-offset: 0.5rem;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -66,18 +87,18 @@ code:not(pre code) {
 
 pre, code:not(pre code) {
 	overflow: auto;
-	border: 1px solid #8E8E7B;
+	border: 1px solid var(--dim);
 }
 
 hr {
 	margin-top: 1.5rem;
-	border-top: 1px solid #FFFFE3;
+	border-top: 1px solid var(--fg);
 }
 
 blockquote {
 	margin: 0 1rem;
 	padding: 0.5rem;
-	border-left: 1px solid #8E8E7B;
+	border-left: 1px solid var(--dim);
 }
 
 blockquote p {
@@ -95,8 +116,8 @@ img, iframe {
 	text-align: right;
 	vertical-align: top;
 	padding-right: 0.5rem !important;
-	color: #8E8E7B;
-	border-right: 1px solid #8E8E7B;
+	color: var(--dim);
+	border-right: 1px solid var(--dim);
 }
 .hljs-ln-code {
 	white-space: pre;
@@ -114,11 +135,11 @@ table:not(.hljs-ln) td {
 }
 table:not(.hljs-ln) tr:not(:last-of-type),
 table:not(.hljs-ln) tr:first-of-type {
-	border-bottom: 1px solid #8E8E7B !important;
+	border-bottom: 1px solid var(--dim) !important;
 }
 table:not(.hljs-ln) tr th:not(:last-of-type),
 table:not(.hljs-ln) tr td:not(:last-of-type) {
-	border-right: 1px solid #8E8E7B;
+	border-right: 1px solid var(--dim);
 }
 
 body > header {
@@ -134,7 +155,17 @@ body > header {
 body > header > nav {
 	display: flex;
 	flex-direction: row;
+	height: 100%; /* Stop from taking more vertical space than required */
 	gap: 1ch;
+}
+
+body > header > nav select {
+	margin-top: 0.15rem;
+	outline: none;
+	border: none;
+	background: none;
+	color: var(--fg);
+	border: 1px solid var(--dim);
 }
 
 body > header > div {
