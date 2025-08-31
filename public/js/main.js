@@ -168,8 +168,9 @@ window.addEventListener("load", function() {
 	if (window.location.pathname.startsWith("/post/")) {
 		ShareButtonInit();
 		LikeButtonInit();
-		ThemeButtonInit();
 	}
+
+	ThemeButtonInit();
 
 	if (typeof hljs != 'undefined') {
 		hljs.highlightAll();
