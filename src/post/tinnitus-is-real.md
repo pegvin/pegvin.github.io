@@ -14,7 +14,7 @@ what bothers me is the fact that how young I am to have this issue.
 Tinnitus can be caused by alot of things but the most common amongst
 young people is prolonged exposure to loud sounds.
 
-For me it was a combination:
+For me it was a combination of:
 1. Loud music (often via earphones).
 2. Loud wind noise caused by motorcycling.
 
