@@ -31,6 +31,6 @@ subjective but the best noise reduction you will get is from
 those orange foam ear plugs.
 
 It's worth it to invest in such a product than to be potentially
-dependent on an hearing aid for rest of your life. And trust me,
-If you unfortunately get Tinnitus & Become aware of it. The sound
-will never leave you.
+dependent on an hearing aid or hear sounds that don't exist for 
+the rest of your life. And trust me, If you unfortunately get
+Tinnitus & Become aware of it. The sound will never leave you.
