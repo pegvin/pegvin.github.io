@@ -1,6 +1,6 @@
 ---
 title Hello World!
-date
+date 20th Apr, 2024
 last_modified_at
 ---
 

@@ -43,7 +43,7 @@ function ThemeButtonInit() {
 		Cache_Set("main.js", "page-theme", v);
 	});
 
-	[ "System", "Light", "Dark" ].forEach(function(v, i) {
+	[ "SYSTEM", "LIGHT", "DARK" ].forEach(function(v, i) {
 		let option = document.createElement("option");
 		option.setAttribute("value", v.toLowerCase());
 		option.innerText = v;
@@ -167,7 +167,7 @@ function LikeButtonInit() {
 window.addEventListener("load", function() {
 	if (window.location.pathname.startsWith("/post/")) {
 		ShareButtonInit();
-		LikeButtonInit();
+		// LikeButtonInit();
 	}
 
 	ThemeButtonInit();
